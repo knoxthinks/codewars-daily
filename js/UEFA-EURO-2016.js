@@ -4,16 +4,25 @@
 // uefaEuro2016(['Belgium', 'Italy'],[0, 2]) // "At match Belgium - Italy, Italy won!"
 // uefaEuro2016(['Portugal', 'Iceland'],[1, 1]) // "At match Portugal - Iceland, teams played draw."
 
-function uefaEuro2016(teams, scores){
-    // your code...
-    function uefaEuro2016(teams, scores){
-        // your code....
-        return `At match ${teams[0]} - ${teams[1]}, ${scores} won!`
-      }
-  }
+// function uefaEuro2016(teams, scores){
+//     // your code...
+//     function uefaEuro2016(teams, scores){
+//         // your code....
+//         return `At match ${teams[0]} - ${teams[1]}, ${scores} won!`
+//       }
+//   }
 
   //Parameters teams, scores
   //return: string just like examples
   //examples:
   //pseudo code
   // team1,2  scores
+
+  function uefaEuro2016(teams, scores){
+    // your code...
+    if (scores[0] == scores[1])
+      return `At match ${teams[0]} - ${teams[1]}, teams played draw.`;
+    if (scores[0] < scores[1])
+      return `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`;
+    return `At match ${teams[0]} - ${teams[1]}, ${teams[0]} won!`;
+  }
