@@ -24,3 +24,40 @@ function checkExam(array1, array2) {
 //if no same, -1
 //else "", 0
 //reduce the array to a single #
+
+// function checkExam(arr1, arr2) {
+//     let sum = 0
+//     for(i=0; i<arr1.length;i++)
+//     if(arr1[i] = ''){
+//         return sum +=0
+//     }
+//     if(arr1[i] = arr2[i]) {
+//         return sum += 4
+//     }
+//     if(arr1[i] != arr2[i]) {
+//         return sum -= 1
+//     }else{
+//       return sum
+//     }  
+// }
+
+function checkExam(arr1, arr2) {
+    let sum = 0;
+    for(i=0; i<arr1.length;i++)
+    if(arr2[i] === ''){
+       sum += 0
+    }
+    else if(arr1[i] == arr2[i]) {
+       sum += 4
+    }
+    else{
+       sum -= 1
+    }
+    return sum < 0 ?  0 : sum
+}
+
+//notes
+//i needed make sure i used "=="
+//i can remove the "return statements on ifs"
+//the final return statement for the "if lower than 0"
+// i solved this 80% of the way
